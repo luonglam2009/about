@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang mở đầu</title>
+    <style>
+        /* Toàn bộ trang được căn giữa */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            font-family: Arial, sans-serif;
+            background-color: #ff7e5f;
+        }
+
+        /* Nút bấm */
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            background-color: #4CAF50; /* Màu mặc định ban đầu */
+            animation: colorChange 4s infinite; /* Gọi animation đổi màu */
+        }
+
+        /* Đổi màu liên tục */
+        @keyframes colorChange {
+            0% { background-color: #4CAF50; } /* Màu xanh lá cây */
+            25% { background-color: #ff5722; } /* Màu cam */
+            50% { background-color: #2196F3; } /* Màu xanh dương */
+            75% { background-color: #9C27B0; } /* Màu tím */
+            100% { background-color: #4CAF50; } /* Quay lại màu xanh lá cây */
+        }
+    </style>
+</head>
+<body>
+    <!-- Nút đổi màu liên tục được căn giữa -->
+    <a href="index.html" class="btn">Go to the main page</a>
+</body>
+</html>
