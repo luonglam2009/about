@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction Lương Lâm</title>
+
+    <!-- Thêm CSS của AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="styles.css">
+
     <style>
+        /* Hiệu ứng Hover cho các nút */
         .ngl-button {
             background-color: #ff5f8f; /* Màu nền của nút */
             color: white; /* Màu chữ */
@@ -15,39 +20,66 @@
             font-size: 16px;
             display: inline-block;
             margin-top: 20px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển màu và phóng to */
         }
 
         .ngl-button:hover {
             background-color: #ff3366; /* Màu khi di chuột qua nút */
+            transform: scale(1.1); /* Phóng to nhẹ khi di chuột */
+        }
+
+        /* Hiệu ứng Hover cho link (đường dẫn) */
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: transform 0.3s ease; /* Thêm hiệu ứng phóng to mượt mà */
+        }
+
+        a:hover {
+            transform: scale(1.2); /* Phóng to link khi di chuột */
+        }
+
+        /* Hiệu ứng Hover cho ảnh */
+        img {
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05); /* Phóng to nhẹ khi di chuột qua ảnh */
+        }
+
+        /* Thêm hiệu ứng khi cuộn với AOS */
+        section {
+            padding: 50px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
+        <header data-aos="fade-down">
             <h1>Welcome to my website</h1>
         </header>
-        
-        <section id="about-me">
+
+        <section id="about-me" data-aos="fade-right">
             <h2>About me</h2>
             <p>My name is Lương Lâm. I am currently studying at Nguyen Hue HighSchool.</p>
         </section>
 
-        <section id="skills">
+        <section id="skills" data-aos="fade-left">
             <h2>Skills</h2>
             <p>Computer repair</p>
             <p>Programming</p>
             <p>Good at coding</p>
         </section>
 
-        <section id="ask-question">
+        <section id="ask-question" data-aos="fade-up">
             <h2>Ask me anything</h2>
             <!-- Thêm nút NGL -->
             <a href="https://ngl.link/luonglam1" class="ngl-button" target="_blank">Send anonymous messages via NGL</a>
         </section>
-        
-        <section id="contact">
+
+        <section id="contact" data-aos="zoom-in">
             <h2>Contact me</h2>
             <p>Email: <a href="mailto:SoiGamming2009@gmail.com" target="_blank">SoiGamming2009@gmail.com</a></p>
             <div class="container">
@@ -68,9 +100,16 @@
                 </a>
             </div>
         </section>
-        
-        <img src="IMG_8981.jpg" alt="meomeo" width="300" height="300">
+
+        <img src="IMG_8981.jpg" alt="meomeo" width="300" height="300" data-aos="flip-up">
     </div>
+
+    <!-- Thêm thư viện JavaScript của AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Khởi tạo AOS
+        AOS.init();
+    </script>
 
     <script src="script.js"></script>
 </body>
